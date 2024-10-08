@@ -41,7 +41,7 @@ function refresh_timer() {
 .
 ```
 
-* 原理: 每595秒發送一個POST請求到https://portal.ccu.edu.tw/ajax/refresh_time_ajax.php告訴伺服器我還活著
+* 原理: 每595秒發送一個POST請求到 `https://portal.ccu.edu.tw/ajax/refresh_time_ajax.php`告訴伺服器我還活著
 
   我推測他後端的設定是10分鐘沒有任何動作的話session會失效被登出
 
@@ -89,7 +89,7 @@ function refresh_timer() {
   }
   ```
 
-  用GET方式去'https://portal.ccu.edu.tw/ssoService.php?service=' + service + '&linkId=' + linkId + '&para=' + para
+  用GET方式去 `'https://portal.ccu.edu.tw/ssoService.php?service=' + service + '&linkId=' + linkId + '&para=' + para`
   可以在單一入口選單打開原始碼看linkid
 
   ```html
@@ -101,7 +101,7 @@ function refresh_timer() {
   </li>
   ```
 
-  e.g. [eCourse2](https://portal.ccu.edu.tw/ssoService.php?service=./test_eCourse2.php&linkId=0037&para=): https://portal.ccu.edu.tw/ssoService.php?service=./test_eCourse2.php&linkId=0037&para=
+  e.g. [eCourse2](https://portal.ccu.edu.tw/ssoService.php?service=./test_eCourse2.php&linkId=0037&para=): `https://portal.ccu.edu.tw/ssoService.php?service=./test_eCourse2.php&linkId=0037&para=`
   實測需要帶ccuSSO, JSESSIONID, TGC這三個cookie
 
   再進行一些後續轉跳就可以登入[eCourse2](https://portal.ccu.edu.tw/ssoService.php?service=./test_eCourse2.php&linkId=0037&para=)，這就是我們平常按下按鈕背後的原理
@@ -132,7 +132,7 @@ function refresh_timer() {
 
 ##### ccuSSO獲取
 
-上圖的https://portal.ccu.edu.tw/login_check_cas.php?ticket=點進去可以看到Set-Cookie ccuSSO=xxx 複製起來，不要包含 ;
+上圖的 `https://portal.ccu.edu.tw/login_check_cas.php?ticket=`點進去可以看到Set-Cookie ccuSSO=xxx 複製起來，不要包含 ;
 
 ###### 最後填好下面 請注意useragent必須和當前登入的瀏覽器一模一樣，不然無法登入
 
