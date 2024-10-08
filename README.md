@@ -89,7 +89,7 @@ function refresh_timer() {
   }
   ```
 
-  用GET方式去'https://portal.ccu.edu.tw/ssoService.php?service=' + service + '&linkId=' + linkId + '&para=' + para  
+  用GET方式去'https://portal.ccu.edu.tw/ssoService.php?service=' + service + '&linkId=' + linkId + '&para=' + para
   e.g. [eCourse2](https://portal.ccu.edu.tw/ssoService.php?service=./test_eCourse2.php&linkId=0037&para=): https://portal.ccu.edu.tw/ssoService.php?service=./test_eCourse2.php&linkId=0037&para=
   實測需要帶ccuSSO, JSESSIONID, TGC這三個cookie
 
@@ -113,16 +113,15 @@ function refresh_timer() {
 
 在[單一入口SSO登入的頁面(打帳號密碼還有Google recaptcha的那個地方  你要理解成校慶煙火那頁面也行)](cas.ccu.edu.tw)打開DevTools，選擇Network分頁，上方勾選保留紀錄
 
-1.png
+![image](https://github.com/chimingwang69/ccuSSO_keep_login/blob/main/img/1.png)
 
-接著打帳號密碼，按好Google recpatcha並登入，從login的response header可以看到Set-Cookie 複製JSESSIONID和TGC的值       後面的Path都不管他    
+接著打帳號密碼，按好Google recpatcha並登入，從login的response header可以看到Set-Cookie 複製JSESSIONID和TGC的值       後面的Path都不管他
 
-2.png
+![image](https://github.com/chimingwang69/ccuSSO_keep_login/blob/main/img/2.png)
 
 ##### ccuSSO獲取
 
 上圖的https://portal.ccu.edu.tw/login_check_cas.php?ticket=點進去可以看到Set-Cookie ccuSSO=xxx 複製起來，不要包含 ;
-
 
 ###### 最後填好下面 請注意useragent必須和當前登入的瀏覽器一模一樣，不然無法登入
 
@@ -138,11 +137,9 @@ JSESSIONID= 'xxx'
 useragent = ''
 ```
 
-
-
 接著可以看到成功登入，拿到[eCourse2](https://portal.ccu.edu.tw/ssoService.php?service=./test_eCourse2.php&linkId=0037&para=)的MoodleSession和[智慧化活動暨報名系統](https://events.lib.ccu.edu.tw/)的sessionid了
 
-3.png
+![image](https://github.com/chimingwang69/ccuSSO_keep_login/blob/main/img/3.png)
 
 ## 4. Note
 
