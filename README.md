@@ -144,4 +144,4 @@ useragent = ''
 ## 4. Note
 
 * 未來如果選課系統改強制用sso登入，可以參考這篇自己寫一個新的，不然2Captcha要錢欸，如果說加選頁面也有recaptcha，那另當別論。
-* 測試時發現伺服端疑似有限制單一帳號的session數量，要用ecourse2時盡量用手機moodle，如果不得已要使用到單一入口，可以記得更新ccuSSO
+* 測試時發現伺服端疑似有限制單一帳號的session數量，要用ecourse2時盡量用手機moodle，如果不得已要使用到單一入口，可以順手更新三個cookies
