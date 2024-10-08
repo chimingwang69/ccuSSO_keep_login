@@ -90,6 +90,17 @@ function refresh_timer() {
   ```
 
   用GET方式去'https://portal.ccu.edu.tw/ssoService.php?service=' + service + '&linkId=' + linkId + '&para=' + para
+  可以在單一入口選單打開原始碼看linkid
+
+  ```html
+  <li class="panel-icon">
+  	<a href="javascript:void(0);" name="0060">
+  		<div class="my-icons my-icons-i0060"></div>
+  		<p>活動報名<br>系統</p>
+  	</a>
+  </li>
+  ```
+
   e.g. [eCourse2](https://portal.ccu.edu.tw/ssoService.php?service=./test_eCourse2.php&linkId=0037&para=): https://portal.ccu.edu.tw/ssoService.php?service=./test_eCourse2.php&linkId=0037&para=
   實測需要帶ccuSSO, JSESSIONID, TGC這三個cookie
 
@@ -97,7 +108,7 @@ function refresh_timer() {
 
   同理，可以拿來登入[智慧化活動暨報名系統](https://events.lib.ccu.edu.tw/)拿到sessionid再拿到csrfmiddlewaretoken來搶服務學習講座
 
-  jsonStr已經格式化好放在map.json裡了
+  jsonStr已經格式化好放在map.json裡了，注意跳脫字元
 
 ## 2. Requirement
 
