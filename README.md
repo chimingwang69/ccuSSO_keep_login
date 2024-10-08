@@ -106,7 +106,7 @@ function refresh_timer() {
 
   再進行一些後續轉跳就可以登入[eCourse2](https://portal.ccu.edu.tw/ssoService.php?service=./test_eCourse2.php&linkId=0037&para=)，這就是我們平常按下按鈕背後的原理
 
-  同理，可以拿來登入[智慧化活動暨報名系統](https://events.lib.ccu.edu.tw/)拿到sessionid再拿到csrfmiddlewaretoken來搶服務學習講座
+  同理，可以拿來登入[智慧化活動暨報名系統](https://events.lib.ccu.edu.tw/)拿到sessionid再拿到csrfmiddlewaretoken來[搶服務學習講座](https://github.com/chimingwang69/CCU-Bullshit)
 
   jsonStr已經格式化好放在map.json裡了，注意跳脫字元
 
