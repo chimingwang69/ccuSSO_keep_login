@@ -41,9 +41,9 @@ function refresh_timer() {
 .
 ```
 
-* 原理: 每595秒發送一個POST請求到 `https://portal.ccu.edu.tw/ajax/refresh_time_ajax.php`告訴伺服器我還活著
+* 原理: 每59.5秒發送一個POST請求到 `https://portal.ccu.edu.tw/ajax/refresh_time_ajax.php`告訴伺服器我還活著
 
-  我推測他後端的設定是10分鐘沒有任何動作的話session會失效被登出
+  我推測他後端的設定是12分鐘沒有任何動作的話session會失效被登出
 
   每次POST請求之後會獲得f5avraaaaaaaaaaaaaaaa_session跟一個TS01C三小的cookie
 
