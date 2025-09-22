@@ -18,7 +18,7 @@ var last_activity_time = '';
 $(document).ready(function() {
 	var date_obj = new Date();
         last_activity_time = Math.floor(date_obj.getTime() / 1000); // milliseconds
-        interval_id = setInterval(refresh_timer, session_refresh_time * 1000);  //就是這行 讓他5950毫秒執行一次 他是非同步執行的
+        interval_id = setInterval(refresh_timer, session_refresh_time * 1000);  //就是這行 讓他595秒執行一次 他是非同步執行的
 	.
 	.
 	.
